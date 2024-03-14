@@ -96,8 +96,7 @@ for g in range(numGenerations):
             else:
                 break
 
-            distanceTravelled += np.linalg.norm(mujoData.qpos[:1] - lastPosition)
-            lastPosition = np.copy(mujoData.qpos[:1])
+            distanceTravelled += mujoData.qpos[:1]
 
         # Save distance traveled to file
         distances = np.append(distances, distanceTravelled)
